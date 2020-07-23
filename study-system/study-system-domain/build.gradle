@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+    //引入springBoot支持
+    id 'io.spring.dependency-management'
+}
+
+dependencies {
+    compile project(":study-repo")
+}
+
+jar {
+    enabled(true)
+    baseName('study-system-domain')
+    version('1.0.0-SNAPSHOT')
+}

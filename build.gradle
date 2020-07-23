@@ -1,0 +1,67 @@
+
+//配置gradle构建项目所需的配置
+buildscript {
+
+    //指定中央仓库
+    repositories {
+        mavenLocal()
+        maven {
+            url('http://maven.aliyun.com/nexus/content/groups/public')
+        }
+        mavenCentral()
+    }
+
+    //引入依赖
+    dependencies {
+        classpath('org.springframework.boot:spring-boot-gradle-plugin:2.3.1.RELEASE')
+    }
+}
+
+//配置子工程依赖
+subprojects {
+
+    apply plugin: 'idea'
+    //声明java插件
+    apply plugin: 'java'
+    //声明springboot插件
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'application'
+
+    group 'com.jd.study'
+    version '1.0.0-SNAPSHOT'
+
+    //jdk版本
+    sourceCompatibility = 8
+    targetCompatibility = 8
+
+    //设置字符编码
+    compileJava.options.encoding('UTF-8')
+    compileTestJava.options.encoding('UTF-8')
+    javadoc.options.encoding('UTF-8')
+
+    //指定中央仓库
+    repositories {
+        mavenLocal()
+        maven {
+            url('http://maven.aliyun.com/nexus/content/groups/public')
+        }
+        mavenCentral()
+    }
+
+    //配置公共依赖
+    dependencies {
+        compileOnly 'org.projectlombok:lombok:1.18.12'
+        annotationProcessor 'org.projectlombok:lombok:1.18.12'
+        implementation 'io.springfox:springfox-swagger2:3.0.0'
+        implementation 'io.springfox:springfox-swagger-ui:3.0.0'
+        implementation ('org.springframework.boot:spring-boot-starter-web') {
+            exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+        }
+        implementation 'org.springframework.boot:spring-boot-starter-undertow'
+    }
+}
+
+//编译时控制台乱码
+tasks.withType(JavaCompile) {
+    options.encoding('UTF-8')
+}

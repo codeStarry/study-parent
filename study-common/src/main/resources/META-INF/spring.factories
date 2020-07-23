@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.jd.study.common.properties.CustomizeProperties,\
+  com.jd.study.common.properties.MybatisPlusGeneratorProperties

@@ -1,0 +1,10 @@
+plugins {
+    id 'java'
+    //引入springBoot支持
+    id 'io.spring.dependency-management'
+}
+
+dependencies {
+    implementation('io.netty:netty-all:4.1.51.Final')
+    implementation('org.java-websocket:Java-WebSocket:1.5.1')
+}

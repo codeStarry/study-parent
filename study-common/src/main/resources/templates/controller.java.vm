@@ -1,0 +1,86 @@
+package ${package.Controller};
+
+import ${package.Service}.${table.serviceName};
+import ${package.Entity}.${entity};
+import com.jd.study.repo.config.R;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+
+#if(${restControllerStyle})
+#else
+#end
+#if(${superControllerClassPackage})
+    ${superControllerClassPackage};
+#end
+
+/**
+ * $!{table.comment} 前端控制器
+ * @author ${author}
+ * @since ${date}
+ */
+#if(${restControllerStyle})
+@RestController
+#else
+@RestController
+#end
+@RequestMapping("#if(${package.ModuleName})/${package.ModuleName}#end/#if(${controllerMappingHyphenStyle})${controllerMappingHyphen}#else${table.entityPath}#end")
+@RequiredArgsConstructor(onConstructor_ = @Autowired)
+#if(${kotlin})
+class ${table.controllerName}#if(${superControllerClass}) : ${superControllerClass}()#end
+
+#else
+    #if(${superControllerClass})
+public class ${table.controllerName} extends ${superControllerClass} {
+    #else
+public class ${table.controllerName} {
+    #end
+
+    private final  ${table.serviceName} targetService;
+
+    /**
+    * 分页查询数据
+    */
+     @PostMapping(value = "/page")
+     public R<IPage<${entity}>> page${entity}(@RequestBody Pager<BaseParam<${entity}>> pager){
+         return R.ok(targetService.page${entity}(pager));
+     }
+
+    /**
+    * 查询全部数据
+    */
+    @PostMapping(value = "/list")
+    public R<List<${entity}>> list${entity}(){
+        return R.ok(targetService.list());
+    }
+
+
+    /**
+    * 新增数据
+    */
+    @PostMapping(value = "/save")
+    public R<Boolean> save(@RequestBody ${entity} entity){
+        return R.ok(targetService.save(entity.defv()));
+    }
+
+    /**
+    * 更新数据
+    */
+    @PostMapping(value = "/update")
+    public R<Boolean> update(@RequestBody ${entity} entity){
+        return R.ok(targetService.updateById(entity));
+    }
+
+     /**
+     * 删除
+     */
+    @PostMapping(value = "/del")
+    public R<Boolean> delete(@RequestBody List<Long> ids){
+        return R.ok(targetService.removeByIds(ids));
+    }
+
+
+}
+
+#end

@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+    //引入springBoot支持
+    id 'io.spring.dependency-management'
+}
+
+dependencies {
+    compile project(":study-common")
+    compile project(":study-cache")
+    compile project(":study-repo")
+    compile project(":study-system:study-system-api")
+    compile project(":study-user:study-user-api")
+    compile project(":study-auth")
+}
+
+jar {
+    enabled(true)
+    baseName('study-user-api')
+    version('1.0.0-SNAPSHOT')
+}

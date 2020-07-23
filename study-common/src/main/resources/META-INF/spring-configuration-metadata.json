@@ -1,0 +1,269 @@
+{
+  "groups": [
+    {
+      "name": "system.customize",
+      "type": "com.jd.study.common.properties.CustomizeProperties",
+      "sourceType": "com.jd.study.common.properties.CustomizeProperties",
+      "description": "系统配置"
+    },
+    {
+      "name": "system.customize.oss",
+      "type": "com.jd.study.common.properties.OssProperties",
+      "sourceType": "com.jd.study.common.properties.OssProperties",
+      "description": "OSS配置"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator",
+      "type": "com.jd.study.common.properties.MybatisPlusGeneratorProperties",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusGeneratorProperties",
+      "description": "mybatis-plus代码生成器配置"
+    }
+  ],
+  "properties": [
+    {
+      "name": "system.customize.oss.endpoint",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.OssProperties",
+      "description": "地域节点"
+    },
+    {
+      "name": "system.customize.oss.accessKeyId",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.OssProperties",
+      "description": "账号"
+    },
+    {
+      "name": "system.customize.oss.secret-access-key",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.OssProperties",
+      "description": "密钥"
+    },
+    {
+      "name": "system.customize.oss.bucket-name",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.OssProperties",
+      "description": "文件桶名"
+    },
+    {
+      "name": "system.customize.oss.file-dir",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.OssProperties",
+      "description": "文件目录"
+    },
+    {
+      "name": "system.customize.oss.directory-map",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.OssProperties",
+      "description": "自定义文件目录",
+      "deprecated": true,
+      "deprecation": {
+        "level": "error",
+        "reason": "未找到解决方案"
+      }
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.package-parent",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusGeneratorProperties",
+      "description": "上级包位置"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.package-entity",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusGeneratorProperties",
+      "description": "生成的Entity所处包"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.package-dao",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusGeneratorProperties",
+      "description": "生成的dao所处包"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.package-service",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusGeneratorProperties",
+      "description": "生成的Service所处包"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.package-service-impl",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusGeneratorProperties",
+      "description": "生成的ServiceImpl所处包"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.package-controller",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusGeneratorProperties",
+      "description": "生成的Controller所处包"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.xml-directory-name",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusGeneratorProperties",
+      "description": "生成的Mapper.xml所处资源文件夹"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.template-mapping-dir",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusGeneratorProperties",
+      "description": "生成的mapping文件夹位于项目里的路径"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.template-xml-vm-dir",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusGeneratorProperties",
+      "description": "xml模板路径"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.template-entity-vm-dir",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusGeneratorProperties",
+      "description": "entity模板路径"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.template-dao-vm-dir",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusGeneratorProperties",
+      "description": "dao模板路径"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.template-service-vm-dir",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusGeneratorProperties",
+      "description": "service模板路径"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.template-service-impl-vm-dir",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusGeneratorProperties",
+      "description": "serviceImpl模板路径"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.template-controller-vm-dir",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusGeneratorProperties",
+      "description": "controller模板路径"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.global.output-dir",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusGeneratorProperties",
+      "description": "生成文件位于项目里的相对路径"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.global.file-override",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusGlobalProperties",
+      "description": "是否覆盖已有文件"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.global.swagger",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusGlobalProperties",
+      "description": "是否启用swagger注解"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.global.author",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusGlobalProperties",
+      "description": "作者"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.global.db-type",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusGlobalProperties",
+      "description": "数据库类型"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.strategy.naming",
+      "type": "java.lang.Boolean",
+      "defaultValue": true,
+      "sourceType": "com.jd.study.common.properties.MybatisPlusStrategyProperties",
+      "description": "表名转实体名规则，是否下划线转驼峰"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.strategy.column-naming",
+      "type": "java.lang.Boolean",
+      "defaultValue": true,
+      "sourceType": "com.jd.study.common.properties.MybatisPlusStrategyProperties",
+      "description": "表字段名转属性规则，是否下划线转驼峰"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.strategy.entity-table-field-annotation-enable",
+      "type": "java.lang.Boolean",
+      "defaultValue": true,
+      "sourceType": "com.jd.study.common.properties.MybatisPlusStrategyProperties",
+      "description": "实体类中属性与表字段映射是否全部写明注释"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.strategy.entity-lombok-model",
+      "type": "java.lang.Boolean",
+      "defaultValue": false,
+      "sourceType": "com.jd.study.common.properties.MybatisPlusStrategyProperties",
+      "description": "实体是否启用Lombok模型注解"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.strategy.entity-builder-model",
+      "type": "java.lang.Boolean",
+      "defaultValue": false,
+      "sourceType": "com.jd.study.common.properties.MybatisPlusStrategyProperties",
+      "description": "实体是否启用Builder构建器模型注解"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.strategy.version-field-name",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusStrategyProperties",
+      "description": "乐观锁字段"
+    },
+    {
+      "name": "system.customize.mybatis-plus-generator.strategy.logic-delete-field-name",
+      "type": "java.lang.String",
+      "sourceType": "com.jd.study.common.properties.MybatisPlusStrategyProperties",
+      "description": "逻辑删字段"
+    }
+  ],
+  "hints": [
+    {
+      "name": "system.customize.mybatis-plus-generator.global.db-type",
+      "values": [
+        {
+          "value": "mysql"
+        },
+        {
+          "value": "mariadb"
+        },
+        {
+          "value": "oracle"
+        },
+        {
+          "value": "db2"
+        },
+        {
+          "value": "h2"
+        },
+        {
+          "value": "hsql"
+        },
+        {
+          "value": "sqlite"
+        },
+        {
+          "value": "postgresql"
+        },
+        {
+          "value": "sqlserver2005"
+        },
+        {
+          "value": "sqlserver"
+        },
+        {
+          "value": "dm"
+        },
+        {
+          "value": "other"
+        }
+      ]
+    }
+  ]
+}

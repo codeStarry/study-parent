@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    //引入springBoot支持
+    id 'io.spring.dependency-management'
+}
+
+dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-mail')
+    implementation('org.mindrot:jbcrypt:0.4')
+    implementation('io.jsonwebtoken:jjwt:0.90')
+    implementation('com.alibaba:fastjson:1.2.70')
+    implementation('com.aliyun.oss:aliyun-sdk-oss:3.8.0')
+    implementation('com.baomidou:mybatis-plus-generator:3.1.2')
+    implementation("org.apache.velocity:velocity-engine-core:2.2")
+    compile('com.baomidou:mybatis-plus-boot-starter:3.1.2')
+    compile('com.alibaba:fastjson:1.2.70')
+}
+
+jar {
+    enabled(true)
+    baseName('study-common')
+    version('1.0.0-SNAPSHOT')
+}

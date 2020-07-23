@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+    //引入springBoot支持
+    id 'io.spring.dependency-management'
+}
+
+dependencies {
+    compile('com.alibaba:druid-spring-boot-starter:1.1.23')
+    runtimeOnly('org.postgresql:postgresql:42.2.14')
+    compile project(":study-common")
+}
+
+jar {
+    enabled(true)
+    baseName('study-repo')
+    version('1.0.0-SNAPSHOT')
+}

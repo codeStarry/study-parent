@@ -1,0 +1,12 @@
+plugins {
+    id 'java'
+    //引入springBoot支持
+    id 'io.spring.dependency-management'
+}
+
+
+jar {
+    enabled(true)
+    baseName('study-auth')
+    version('1.0.0-SNAPSHOT')
+}
