@@ -9,7 +9,17 @@ import java.util.Random;
  */
 public class StringUtils {
 
-    public final static String EMPTY = "";
+    public static final String EMPTY = "";
+    public static final char[] CHARS = {
+            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+            'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+            'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
+            'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F',
+            'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
+            'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
+            'W', 'X', 'Y', 'Z', '0', '1', '2', '3',
+            '4', '5', '6', '7', '8', '9'
+    };
 
     /**
      * 是否为空， 不包括空白字符判断
@@ -73,18 +83,13 @@ public class StringUtils {
         return builder.toString();
     }
 
-    public static void main(String[] args) {
-        String str = "createTimeDateGG";
-        System.out.println(humpToUnderscore(str));
-    }
 
     /**
      * 获取随机数，如果未指定随机数的数量；将默认为 4
      * @param quantity  数量
      * @return          String
      */
-    public static String getRandomNumber(Integer quantity) {
-        String str = "qwertyuioplkjhgfdsazxcvbnm0123456789POIUYTREWQASDFGHJKLMNBVCXZ";
+    public static String getRandomString(Integer quantity) {
         int len = 4;
         if (null != quantity && quantity > 0) {
             len = quantity;
@@ -92,8 +97,8 @@ public class StringUtils {
         Random random = new Random();
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i <= len; i++) {
-            int index = random.nextInt(str.length());
-            builder.append(str.charAt(index));
+            int index = random.nextInt(CHARS.length);
+            builder.append(CHARS[index]);
         }
         return builder.toString();
     }
