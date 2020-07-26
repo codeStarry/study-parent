@@ -5,5 +5,5 @@ plugins {
 }
 
 dependencies {
-
+    compile project(":study-tools")
 }

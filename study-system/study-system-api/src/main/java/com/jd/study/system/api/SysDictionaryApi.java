@@ -29,6 +29,7 @@ public class SysDictionaryApi {
 
     private final ISysDictionaryService targetService;
 
+
     /**
      * 分页查询数据
      */

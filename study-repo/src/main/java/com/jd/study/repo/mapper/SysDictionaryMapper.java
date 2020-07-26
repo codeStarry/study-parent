@@ -1,8 +1,6 @@
 package com.jd.study.repo.mapper;
 
 import org.springframework.stereotype.Repository;
-
-
 import com.jd.study.repo.model.SysDictionary;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 

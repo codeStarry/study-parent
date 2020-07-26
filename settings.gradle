@@ -20,4 +20,5 @@ include 'study-system:study-system-api'
 findProject(':study-system:study-system-api')?.name = 'study-system-api'
 include 'study-push'
 include 'study-network'
+include 'study-tools'
 

@@ -4,6 +4,9 @@ plugins {
     id 'io.spring.dependency-management'
 }
 
+dependencies {
+    compile project(":study-tools")
+}
 
 jar {
     enabled(true)

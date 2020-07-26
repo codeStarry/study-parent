@@ -7,7 +7,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ImportResource;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -21,7 +20,6 @@ import java.io.File;
  */
 @RestControllerAdvice
 @SpringBootApplication
-@ImportResource(locations = {"classpath:druid-bean.xml"})
 public class StudyApplication {
     public static void main(String[] args) {
         SpringApplication.run(StudyApplication.class, args);
