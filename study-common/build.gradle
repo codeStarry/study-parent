@@ -15,6 +15,7 @@ dependencies {
     compile('com.baomidou:mybatis-plus-boot-starter:3.1.2')
     compile('com.alibaba:fastjson:1.2.70')
     compile('com.google.guava:guava:23.0')
+    compile('com.aliyun:aliyun-java-sdk-core:4.5.1')
 }
 
 jar {
