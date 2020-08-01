@@ -1,0 +1,13 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    compile project(":study-common")
+}
+
+jar {
+    enabled(true)
+    baseName('study-tools')
+    version('1.0.0-SNAPSHOT')
+}

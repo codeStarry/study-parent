@@ -20,7 +20,7 @@ public class SendPhoneThird {
     private static final String ACCESS_SECRET = "MkqJnbKbAfi49CTCYrd0FKzOgYBPr6";
     private static final String SIGN_NAME = "爱进步";
     private static final String TEMPLATE_CODE = "SMS_190794878";
-
+    
     public static void sendMsg(String phoneNum, String code) {
         DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", ACCESS_KEY_ID, ACCESS_SECRET);
         IAcsClient client = new DefaultAcsClient(profile);
