@@ -3,9 +3,12 @@ package ${package.Controller};
 import ${package.Service}.${table.serviceName};
 import ${package.Entity}.${entity};
 import com.jd.study.repo.config.R;
+import io.swagger.annotations.ApiModelProperty;
+import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 #if(${restControllerStyle})
@@ -32,55 +35,60 @@ class ${table.controllerName}#if(${superControllerClass}) : ${superControllerCla
 
 #else
     #if(${superControllerClass})
-public class ${table.controllerName} extends ${superControllerClass} {
+    public class ${table.controllerName} extends ${superControllerClass} {
     #else
-public class ${table.controllerName} {
+    public class ${table.controllerName} {
     #end
 
-    private final  ${table.serviceName} targetService;
+private final  ${table.serviceName} targetService;
 
-    /**
-    * 分页查询数据
-    */
-     @PostMapping(value = "/page")
-     public R<IPage<${entity}>> page${entity}(@RequestBody Pager<BaseParam<${entity}>> pager){
-         return R.ok(targetService.page${entity}(pager));
-     }
+/**
+* 分页查询数据
+*/
+@ApiOperation(value = "分页查询数据", response = ${entity}.class)
+@PostMapping(value = "/page")
+public R<IPage<${entity}>>page${entity}(@RequestBody Pager<BaseParam<${entity}>>pager){
+        return R.ok(targetService.page${entity}(pager));
+        }
 
-    /**
-    * 查询全部数据
-    */
-    @PostMapping(value = "/list")
-    public R<List<${entity}>> list${entity}(){
+/**
+* 查询全部数据
+*/
+@ApiOperation(value = "查询全部数据", response = ${entity}.class)
+@PostMapping(value = "/list")
+public R<List<${entity}>>list${entity}(){
         return R.ok(targetService.list());
-    }
+        }
 
 
-    /**
-    * 新增数据
-    */
-    @PostMapping(value = "/save")
-    public R<Boolean> save(@RequestBody ${entity} entity){
+/**
+* 新增数据
+*/
+@ApiOperation(value = "新增数据", response = Boolean.class)
+@PostMapping(value = "/save")
+public R<Boolean> save(@RequestBody ${entity} entity){
         return R.ok(targetService.save(entity.defv()));
-    }
+        }
 
-    /**
-    * 更新数据
-    */
-    @PostMapping(value = "/update")
-    public R<Boolean> update(@RequestBody ${entity} entity){
+/**
+* 更新数据
+*/
+@ApiOperation(value = "更新数据", response = Boolean.class)
+@PostMapping(value = "/update")
+public R<Boolean> update(@RequestBody ${entity} entity){
         return R.ok(targetService.updateById(entity));
-    }
+        }
 
-     /**
-     * 删除
-     */
-    @PostMapping(value = "/del")
-    public R<Boolean> delete(@RequestBody List<Long> ids){
+/**
+* 删除
+*/
+@ApiOperation(value = "删除", response = Boolean.class)
+@PostMapping(value = "/del")
+public R<Boolean> delete(@RequestBody List<Long> ids){
         return R.ok(targetService.removeByIds(ids));
-    }
+        }
 
 
-}
+        }
 
 #end

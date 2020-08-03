@@ -9,6 +9,7 @@ import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import springfox.documentation.oas.annotations.EnableOpenApi;
 
 import javax.servlet.MultipartConfigElement;
 import java.io.File;
@@ -18,6 +19,7 @@ import java.io.File;
  * @author lsy
  * @date 2020-07-18
  */
+@EnableOpenApi
 @RestControllerAdvice
 @SpringBootApplication
 public class StudyApplication {
