@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    //引入springBoot支持
+    id 'io.spring.dependency-management'
 }
 
 dependencies {

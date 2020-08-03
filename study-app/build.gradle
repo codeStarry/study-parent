@@ -11,6 +11,7 @@ dependencies {
     compile project(":study-system:study-system-api")
     compile project(":study-user:study-user-api")
     compile project(":study-auth")
+    compile project(":study-blockchain:study-blockchain-api")
 }
 
 jar {
