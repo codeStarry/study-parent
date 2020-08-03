@@ -3,9 +3,7 @@ package com.jd.study.common.utils;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.sql.SQLOutput;
 import java.text.SimpleDateFormat;
-import java.util.Map;
 
 /**
  * @author zk.chen
