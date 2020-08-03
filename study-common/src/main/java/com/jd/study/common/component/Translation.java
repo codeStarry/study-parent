@@ -28,7 +28,7 @@ public class Translation {
         QueryWrapper<T> wrapper = new QueryWrapper<>(param.getCondition())
                 .ge(null != param.getStartTime(), StringUtils.underscoreToHump(param.getTimeName()), param.getStartTime())
                 .le(null != param.getEndTime(), StringUtils.underscoreToHump(param.getTimeName()), param.getEndTime())
-                .orderBy(StringUtils.isNotEmpty(param.getOrderBy()), param.getAsc() > 0, param.getOrderBy());
+                .orderBy(StringUtils.isNotEmpty(param.getOrderBy()), param.getAsc() > 0, StringUtils.underscoreToHump(param.getOrderBy()));
 
         return wrapper;
     }

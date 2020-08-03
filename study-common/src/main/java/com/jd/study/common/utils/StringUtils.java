@@ -83,6 +83,11 @@ public class StringUtils {
         return builder.toString();
     }
 
+    public static void main(String[] args) {
+        String str = "create_time";
+        System.out.println(underscoreToHump(str));
+    }
+
 
     /**
      * 获取随机数，如果未指定随机数的数量；将默认为 4
