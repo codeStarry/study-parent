@@ -17,18 +17,29 @@ import java.util.Map;
 /**
  * @author zk.chen
  * @date 2020/8/1
+ * http工具类
  */
 public class HttpUtils {
 
     public static final String JSON_TYPE = "application/json";
     public static final String FORM_TYPE = "application/x-www-form-urlencoded";
 
+    /**
+     * 请求配置
+     */
     private static final RequestConfig config = RequestConfig.custom()
             .setConnectionRequestTimeout(30000)
             .setConnectTimeout(30000)
             .setSocketTimeout(5000)
             .build();
 
+    /**
+     * get请求
+     *
+     * @param url
+     * @param header
+     * @return
+     */
     public static String doGet(String url, Map<String, String> header) {
         final HttpClient client = HttpClients.createDefault();
         final HttpGet httpGet = new HttpGet(url);
@@ -46,6 +57,14 @@ public class HttpUtils {
         return result;
     }
 
+    /**
+     * post请求
+     *
+     * @param url
+     * @param header
+     * @param param
+     * @return
+     */
     public static String doPostForm(String url, Map<String, String> header, Map<String, Object> param) {
         final HttpClient httpClient = HttpClients.createDefault();
         final StringBuffer sb = new StringBuffer();
@@ -68,6 +87,15 @@ public class HttpUtils {
         return result;
     }
 
+    /**
+     * post请求
+     *
+     * @param url
+     * @param header
+     * @param param
+     * @param contentType
+     * @return
+     */
     public static String doPost(String url, Map<String, String> header, String param, String contentType) {
         final HttpClient client = HttpClients.createDefault();
         final HttpPost httpPost = new HttpPost(url);
